@@ -23,6 +23,8 @@ body {
   
   .description{
     white-space: pre-wrap;
+    position:relative;
+    top: -10%;
   }
   
   .time-block{
@@ -31,7 +33,7 @@ body {
   }
   
   .row {
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     height: 80px;
     border-top: 1px solid white;;
   }
@@ -55,6 +57,12 @@ body {
   .future {
     background-color: #77dd77;
     color: white;
+  }
+
+  .userInputMtg{
+    position: relative;
+    resize: none;
+    top: 5%
   }
   
   .saveBtn {

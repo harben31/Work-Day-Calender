@@ -11,16 +11,66 @@ const currentDay = $("#currentDay");
 const hourOfDay = $(".hourOfDay");
 const userInputMtg = $(".userInputMtg");
 const today = moment();
-const currentHour = today.format("HH");
+// const currentHour = today.format("HH");
+const currentHour = 11;
+const saveButton = $(".saveBtn");
+const schedule = $("#schedule");
+const eventEl = $(".event")
+
+const timeArray = []
+
 currentDay.text(today.format("dddd, MMM Do, YYYY"));
 
-// if (hourOfDay.attr("data-hour")<currentHour.toString()){
-if (hourOfDay.attr("data-hour")<currentHour){
-    userInputMtg.attr("class", "bg-danger");
-    console.log("hour of day");
+
+// const renderMtg = function(){
+//     if(localStorage.getItem())
+
+// }
+for (i=0; i<userInputMtg.length; i++){
+    console.log(i);
+    console.log(userInputMtg[i].dataset.hour);
+    console.log(localStorage.key(i));
+        if(localStorage.key(i)===null){
+            console.log("break")
+            break
+        } else if(userInputMtg[i].dataset.hour===localStorage.key(i)){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            console.log(key);
+            console.log(value);
+            userInputMtg[i].innerHTML = value;
+            // userInputMtg[i].text.(value);
+        }
+            
+} 
+
+// console.log(userInputMtg[j].attr("data-hour") <currentHour);
+// console.log(userInputMtg[j].attr("data-hour") ===currentHour);
+// console.log(userInputMtg[j].attr("data-hour") >currentHour);
+
+for(let j=0; j<userInputMtg.length; j++){
+    console.log(eventEl[j]);
+    if (userInputMtg[j].dataset.hour<currentHour){
+        $(eventEl[j]).removeClass("future").addClass("past");
+    }  else if(userInputMtg[j].dataset.hour>currentHour){
+        $(eventEl[j]).removeClass("present").addClass("future");
+    } else if(userInputMtg[j].dataset.hour===currentHour){
+        $(eventEl[j]).removeClass("past").addClass("present");
+    }
+    console.log(userInputMtg[j].dataset.hour <currentHour);
+    console.log(userInputMtg[j].dataset.hour ===currentHour);
+    console.log(userInputMtg[j].dataset.hour >currentHour);
+
+    console.log(userInputMtg[j].dataset.hour)
+    console.log(currentHour)
 }
 
 
 
-console.log(hourOfDay.attr("data-hour"));
-console.log(currentHour.toString());
+
+
+schedule.on("click", "i", function(event){
+    // console.log($(event.target).closest(".hourOfDay").find("textarea").val());
+    localStorage.setItem(event.target.dataset.hour, $(event.target).closest(".hourOfDay").find("textarea").val());
+    
+});
