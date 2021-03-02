@@ -8,12 +8,12 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
-    />
+    /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -26,7 +26,7 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead">00:00:00</p>
     </header>
     <main id="schedule" class=" px-5">
 
@@ -36,7 +36,7 @@
                 <p>9am</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="09" class="userInputMtg description p-0" id="09Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="09" class="userInputMtg description p-0" id="09Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="09"> &#128210</i>
@@ -50,7 +50,7 @@
                 <p>10am</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="10" class="userInputMtg description p-0" id="10Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="10" class="userInputMtg description p-0" id="10Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="10"> &#128210</i>
@@ -64,7 +64,7 @@
                 <p>11am</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="11" class="userInputMtg description p-0" id="11Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="11" class="userInputMtg description p-0" id="11Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="11"> &#128210</i>
@@ -78,7 +78,7 @@
                 <p>12pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="12" class="userInputMtg description p-0" id="12Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="12" class="userInputMtg description p-0" id="12Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="12"> &#128210</i>
@@ -92,7 +92,7 @@
                 <p>1pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="13" class="userInputMtg description p-0" id="01Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="13" class="userInputMtg description p-0" id="01Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="13"> &#128210</i>
@@ -106,7 +106,7 @@
                 <p>2pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="14" class="userInputMtg description p-0" id="02Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="14" class="userInputMtg description p-0" id="02Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="14"> &#128210</i>
@@ -120,7 +120,7 @@
                 <p>3pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="15" class="userInputMtg description p-0" id="03Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="15" class="userInputMtg description p-0" id="03Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="15"> &#128210</i>
@@ -134,7 +134,7 @@
                 <p>4pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="16" class="userInputMtg description p-0" id="04Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="16" class="userInputMtg description p-0" id="04Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="16"> &#128210</i>
@@ -148,12 +148,18 @@
                 <p>5pm</p>
             </div>
             <div class="event col-10">
-                <textarea name="mtg" data-hour="17" class="userInputMtg description p-0" id="05Mtg" cols="90" rows="4"></textarea>
+                <textarea name="mtg" data-hour="17" class="userInputMtg description p-0" id="05Mtg" cols="97" rows="4"></textarea>
             </div>
             <div class="saveBtn col-1 d-flex align-items-center justify-content-center">
                 <i data-hour="17"> &#128210</i>
             </div>
         </div>
+      </div>
+
+      <hr> 
+      <br>
+      <div id="wrapperButton" class="vw-100 d-flex justify-content-center mb-5">
+        <button id="clearBtn" type="button" class="btn btn-outline-secondary justify-self-center">clear scedule</button>
       </div>
 
     </main>

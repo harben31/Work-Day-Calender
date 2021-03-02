@@ -9,8 +9,8 @@ body {
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
     padding: 10px;
+    margin-left: 5px;
   }
   
   .jumbotron {
@@ -42,6 +42,11 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    border-right: 2px solid gray;
+  }
+
+  .event {
+    padding-left:unset;
   }
   
   .past {
@@ -66,7 +71,7 @@ body {
   }
   
   .saveBtn {
-    border-left: 1px solid black;
+    border-left: 2px solid gray;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
