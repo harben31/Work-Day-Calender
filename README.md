@@ -12,6 +12,13 @@ CSS
 HTML
 JvaScript
 
+License: MIT
+
+Github: [harben31](https://github.com/harben31)
+LinkedIn: [benjamin-harris-81281a2b](https://www.linkedin.com/in/benjamin-harris-81281a2b/)
+Email: [harben31@gmail.com](mailto:harben31@gmail.com)
+Portfolio: [harben31.github.io/Benjamins-Portfolio/](https://harben31.github.io/Benjamins-Portfolio/)
+
 [Deployed Website](https://harben31.github.io/bbh_homework_wk_5/)
 
 ![Screenshot](./assets/images/screenshot1.png)
